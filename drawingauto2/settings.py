@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-(5*vs5(m772l*@f_!vy7e_@n)8soawtzkxwatw-wa8!%7pgxrm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# settings.py
+
+ALLOWED_HOSTS = ['cadrun.onrender.com', '127.0.0.1', 'localhost']
+
 
 
 # Application definition
