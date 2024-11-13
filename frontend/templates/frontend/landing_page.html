@@ -1,0 +1,142 @@
+<!-- templates/frontend/landing_page.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'frontend/css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <title>DrawingAuto2 - Landing Page</title>
+    <style>
+        .hero {
+            background: url("{% static 'frontend/images/hero-bg.jpg' %}") center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .features {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+        .feature-card {
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CADrun</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="{% url 'siteplans:create_site_plan' %}" class="btn btn-primary">Create Plans</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 70px;">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h2>Automate Your Site Plans</h2>
+                <p class="lead">Effortlessly create detailed site plans for commercial retail pads in just a few clicks.</p>
+                <a href="{% url 'drawing_board' %}" class="btn btn-primary btn-lg mt-4">Get Started</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="text-center mb-5">Features</h2>
+                <div class="row">
+                    <div class="col-md-3 mb-4">
+                        <div class="feature-card text-center">
+                            <img src="{% static 'frontend/images/easy-to-use-icon.png' %}" alt="Easy to use" class="mb-3">
+                            <h4>Easy-to-use Interface</h4>
+                            <p>Our simple and intuitive interface makes creating site plans easy for everyone.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="feature-card text-center">
+                            <img src="{% static 'frontend/images/fast-drawing-icon.png' %}" alt="Fast Drawing" class="mb-3">
+                            <h4>Generate CAD Drawings Fast</h4>
+                            <p>Create CAD drawings in seconds and save hours of manual work.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="feature-card text-center">
+                            <img src="{% static 'frontend/images/preview-icon.png' %}" alt="Preview" class="mb-3">
+                            <h4>Preview Before Downloading</h4>
+                            <p>View your detailed site plans before downloading for quality assurance.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="feature-card text-center">
+                            <img src="{% static 'frontend/images/utilities-icon.png' %}" alt="Utilities" class="mb-3">
+                            <h4>Manage Utilities & Elements</h4>
+                            <p>Manage site utilities, elements, and zoning requirements seamlessly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials bg-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">What Our Users Say</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="p-4 border rounded text-center">
+                            <p>"DrawingAuto2 has completely transformed the way I approach site planning. It's fast, accurate, and so easy to use!"</p>
+                            <p><strong>- Alex R., Engineer</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="p-4 border rounded text-center">
+                            <p>"Creating site plans used to be so time-consuming, but now it takes minutes. Great tool!"</p>
+                            <p><strong>- Jessica M., Architect</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="p-4 border rounded text-center">
+                            <p>"I love the preview feature—being able to see the plan before downloading it has been a game changer."</p>
+                            <p><strong>- Daniel L., Surveyor</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section text-center py-5 bg-primary text-white">
+            <div class="container">
+                <h2>Start Creating Site Plans Effortlessly!</h2>
+                <a href="{% url 'drawing_board' %}" class="btn btn-outline-light btn-lg mt-3">Get Started Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 DrawingAuto2. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

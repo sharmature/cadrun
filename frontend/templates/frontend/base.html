@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'frontend/css/styles.css' %}">
+    <title>{% block title %}Site Plan Automation{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'drawing_preview' %}">Generate Preview</a>
+            <a href="{% url 'utilities' %}">Utilities</a>
+            <!-- Add more links as needed -->
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2023 Site Plan Automation. All rights reserved.</p>
+    </footer>
+    <script src="{% static 'frontend/js/scripts.js' %}"></script>
+</body>
+</html>

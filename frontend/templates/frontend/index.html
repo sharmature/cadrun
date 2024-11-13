@@ -1,0 +1,49 @@
+<!-- templates/frontend/index.html -->
+{% extends 'frontend/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero-section text-center p-5 bg-light">
+        <div class="container">
+            <h1 class="display-4">Welcome to the Site Plan Automation Platform</h1>
+            <p class="lead mt-3">Automate site planning in seconds and save hours of engineering time.</p>
+            <a href="{% url 'create_site_plan' %}" class="btn btn-primary btn-lg mt-4">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="feature-card p-4 border rounded shadow-sm mb-4">
+                        <h3>Time-Saving</h3>
+                        <p>Reduce hours of manual drafting to seconds with automated site plan generation.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-4 border rounded shadow-sm mb-4">
+                        <h3>Accurate Planning</h3>
+                        <p>Use precise algorithms to create site plans that meet zoning requirements.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-4 border rounded shadow-sm mb-4">
+                        <h3>Easy to Use</h3>
+                        <p>Intuitive user interface designed for engineers, surveyors, and planning professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section text-center py-5 bg-primary text-white">
+        <div class="container">
+            <h2>Ready to create your next site plan?</h2>
+            <a href="{% url 'create_site_plan' %}" class="btn btn-outline-light btn-lg mt-3">Create a Site Plan Now</a>
+        </div>
+    </section>
+{% endblock %}

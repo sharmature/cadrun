@@ -1,0 +1,85 @@
+/* frontend/static/frontend/css/styles.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark text color */
+}
+
+/* Navbar Styles */
+.navbar {
+    margin-bottom: 20px; /* Space below the navbar */
+}
+
+.navbar-brand {
+    font-weight: bold; /* Make the brand name bold */
+}
+
+.nav-link {
+    color: #333; /* Dark text color for links */
+}
+
+.nav-link:hover {
+    color: #ff9800; /* Change color on hover */
+}
+
+/* Hero Section Styles */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff3e0; /* Lighter orange for hero section */
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+/* Call to Action Button Styles */
+.cta-button, .btn-primary {
+    background-color: #ff9800; /* Orange button */
+    color: white;
+    border: none; /* Remove border */
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover, .btn-primary:hover {
+    background-color: #fb8c00; /* Darker orange on hover */
+}
+
+/* Features Section Styles */
+.features {
+    padding: 20px;
+    text-align: center;
+}
+
+.features h2 {
+    margin-top: 0;
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffcc80; /* Light orange */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
